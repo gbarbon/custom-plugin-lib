@@ -107,10 +107,10 @@ tap.test('Plain Custom Service', test => {
     assert.ok(/application\/json/.test(response.headers['content-type']))
     assert.ok(/charset=utf-8/.test(response.headers['content-type']))
     assert.strictSame(JSON.parse(response.payload), {
-      userId: null,
+      userId: '',
       userGroups: [],
       userProperties: { prop1: 'value1', prop2: 'value2' },
-      clientType: null,
+      clientType: '',
       backoffice: false,
     })
     assert.end()
@@ -128,10 +128,10 @@ tap.test('Plain Custom Service', test => {
     assert.ok(/application\/json/.test(response.headers['content-type']))
     assert.ok(/charset=utf-8/.test(response.headers['content-type']))
     assert.strictSame(JSON.parse(response.payload), {
-      userId: null,
+      userId: '',
       userProperties: null,
       userGroups: [],
-      clientType: null,
+      clientType: '',
       backoffice: false,
     })
     assert.end()
